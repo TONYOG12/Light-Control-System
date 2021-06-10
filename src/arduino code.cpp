@@ -24,13 +24,13 @@ void loop()
   }
   
   if(pirsensor2 == HIGH)
-    {	
-      count2++;
-      if(count - count2 == 0)
-      {	
-        digitalWrite(13, LOW);
-      }
+  {	
+     count2++;
+     if(count - count2 == 0)
+     {	
+       digitalWrite(13, LOW);
      }
+   }
 
   delay(10);
 }
