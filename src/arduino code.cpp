@@ -13,6 +13,7 @@ void setup()
 int count = 0;
 //counts the number of people who have left the room through the exit
 int count2 = 0;
+
 void loop()
 {
   //main code which runs repeatedly
@@ -21,6 +22,7 @@ void loop()
   
   if (pirsensor == HIGH)
   { 
+    //light is turned on when movement is detected into the room
     digitalWrite(13, HIGH);
     count++;  
   }
@@ -30,6 +32,7 @@ void loop()
      count2++;
      if(count - count2 == 0)
      {	
+       //light is turned off if number of people who have entered the room  = number of people who have left the room
        digitalWrite(13, LOW);
      }
    }
